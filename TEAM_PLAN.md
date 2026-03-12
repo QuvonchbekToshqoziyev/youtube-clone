@@ -16,9 +16,9 @@
 ### Week 1: Project Bootstrapping
 
 **All Members (Day 1 — together)**
-- [ ] Create shared GitHub repository, set up branch strategy (`main`, `dev`, `feature/*`)
-- [ ] Agree on commit conventions and PR review flow
-- [ ] Run `nest new youtube-clone` and push base project
+- [✅] Create shared GitHub repository, set up branch strategy (`main`, `dev`, `feature/*`)
+- [✅] Agree on commit conventions and PR review flow
+- [✅] Run `nest new youtube-clone` and push base project
 - [ ] Install shared packages:
   ```bash
   npm install @prisma/client prisma
