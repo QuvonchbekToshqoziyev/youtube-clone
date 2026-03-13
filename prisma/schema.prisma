@@ -9,12 +9,6 @@ datasource db {
 }
 // new line
 model User {
-<<<<<<< HEAD
-  id    Int     @default(autoincrement()) @id
-  email String  @unique
-  name  String
-}
-=======
   id                String   @id @default(uuid())
   email             String   @unique
   username          String   @unique
@@ -211,4 +205,3 @@ enum Visibility {
   UNLISTED
   PRIVATE
 }
->>>>>>> 93ce1cdd0f54eebe52b1a1bd7e71eb72a06c5946
