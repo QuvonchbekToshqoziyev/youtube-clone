@@ -7,8 +7,10 @@ import { LikesModule } from './modules/likes/likes.module';
 import { UsersModule } from './modules/users/users.module';
 import { PlaylistsModule } from './modules/playlists/playlists.module';
 import { SubcriptionsModule } from './modules/subcriptions/subcriptions.module';
+import { UploadModule } from './modules/upload/upload.module';
 
 @Module({
-  imports: [PrismaModule, AuthModule, VideosModule, CommentsModule, LikesModule, UsersModule, PlaylistsModule, SubcriptionsModule],
+  imports: [PrismaModule, AuthModule, VideosModule, CommentsModule, LikesModule, UsersModule, PlaylistsModule, SubcriptionsModule, UploadModule],
 })
 export class AppModule {}
+
