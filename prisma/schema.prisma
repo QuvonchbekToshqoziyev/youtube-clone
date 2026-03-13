@@ -7,9 +7,10 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
-
+// new line
 model User {
   id    Int     @default(autoincrement()) @id
   email String  @unique
   name  String
+  
 }
