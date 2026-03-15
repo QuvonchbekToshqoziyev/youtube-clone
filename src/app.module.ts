@@ -8,9 +8,17 @@ import { UsersModule } from './modules/users/users.module';
 import { PlaylistsModule } from './modules/playlists/playlists.module';
 import { SubcriptionsModule } from './modules/subcriptions/subcriptions.module';
 import { UploadModule } from './modules/upload/upload.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [PrismaModule, AuthModule, VideosModule, CommentsModule, LikesModule, UsersModule, PlaylistsModule, SubcriptionsModule, UploadModule],
+
+  imports: [
+
+    ConfigModule.forRoot({
+      isGlobal: true
+    })
+    ,
+    PrismaModule, AuthModule, VideosModule, CommentsModule, LikesModule, UsersModule, PlaylistsModule, SubcriptionsModule, UploadModule],
 })
-export class AppModule {}
+export class AppModule { }
 

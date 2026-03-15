@@ -1,11 +1,20 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateCommentDto } from './dto/create-comment.dto';
 import { UpdateCommentDto } from './dto/update-comment.dto';
+import { PrismaService } from 'src/core/database/prisma.service';
 
 @Injectable()
 export class CommentsService {
-  create(createCommentDto: CreateCommentDto) {
-    return 'This action adds a new comment';
+  constructor(private prisma:PrismaService){}
+ async create(createCommentDto: CreateCommentDto,id:string) {
+    const findVideo = await this.prisma.video.findUnique({where:{id}})
+    if(!findVideo){
+      throw new NotFoundException("Video mavjud emas Comment yozolmaysiz")
+    }
+
+    return await this.prisma.comment.create({
+      data:createCommentDto
+    })
   }
 
   findAll() {
