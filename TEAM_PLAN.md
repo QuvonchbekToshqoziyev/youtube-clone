@@ -19,7 +19,7 @@
 - [✅] Create shared GitHub repository, set up branch strategy (`main`, `dev`, `feature/*`)
 - [✅] Agree on commit conventions and PR review flow
 - [✅] Run `nest new youtube-clone` and push base project
-- [ ] Install shared packages:
+- [✅] Install shared packages:
   ```bash
   npm install @prisma/client prisma
   npm install @nestjs/jwt @nestjs/passport passport passport-jwt passport-local
@@ -34,26 +34,26 @@
 - [ ] Write `docker-compose.yml` with PostgreSQL and Redis services
 - [ ] Write `Dockerfile` for the NestJS app
 - [ ] Configure `.env` and `.env.example` files
-- [ ] Initialize Prisma (`npx prisma init`) and set up `DATABASE_URL`
-- [ ] Design and write the full Prisma schema (`prisma/schema.prisma`):
+- [✅] Initialize Prisma (`npx prisma init`) and set up `DATABASE_URL`
+- [✅] Design and write the full Prisma schema (`prisma/schema.prisma`):
   - `User`, `Video`, `Comment`, `Like`, `Subscription`, `Playlist`, `PlaylistVideo`
   - All enums: `Role`, `VideoStatus`, `Visibility`, `LikeType`
-- [ ] Run first migration: `npx prisma migrate dev --name init`
-- [ ] Share schema with the team via PR
+- [✅] Run first migration: `npx prisma migrate dev --name init`
+- [✅] Share schema with the team via PR
 
 **Member 2 — Auth Module**
-- [ ] Generate `auth` module: `nest g module auth && nest g service auth && nest g controller auth`
-- [ ] Generate `users` module
-- [ ] Implement `POST /auth/register` (hash password with bcrypt, create user)
-- [ ] Implement `POST /auth/login` (validate credentials, return JWT access token)
-- [ ] Implement JWT strategy (`JwtStrategy`) and `JwtAuthGuard`
-- [ ] Implement `GET /users/me` (protected route)
+- [✅] Generate `auth` module: `nest g module auth && nest g service auth && nest g controller auth`
+- [✅] Generate `users` module
+- [✅] Implement `POST /auth/register` (hash password with bcrypt, create user)
+- [✅] Implement `POST /auth/login` (validate credentials, return JWT access token)
+- [✅] Implement JWT strategy (`JwtStrategy`) and `JwtAuthGuard`
+- [✅] Implement `GET /users/me` (protected route)
 
 **Member 3 — Video Module Scaffold**
-- [ ] Generate `videos` module
-- [ ] Implement `Video` CRUD skeleton (create, findAll, findOne, update, delete)
-- [ ] Implement `POST /videos/upload` — accept `multipart/form-data`, save file to `./uploads/` temporarily
-- [ ] Return video record with `status: PROCESSING`
+- [✅] Generate `videos` module
+- [✅] Implement `Video` CRUD skeleton (create, findAll, findOne, update, delete)
+- [✅] Implement `POST /videos/upload` — accept `multipart/form-data`, save file to `./uploads/` temporarily
+- [✅] Return video record with `status: PROCESSING`
 
 **Member 4 — Comments & Likes Scaffold**
 - [ ] Generate `comments` and `likes` modules
